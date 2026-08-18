@@ -1,10 +1,27 @@
-import { View, Text } from 'react-native'
+import { TouchableOpacity, TouchableOpacityProps } from 'react-native'
 import React from 'react'
+import { styles } from './style';
+import { MaterialIcons } from '@expo/vector-icons';
+import { colors } from '@/theme/colors';
 
-export default function TabBarIcon() {
+type TabBarIconProps = TouchableOpacityProps & {
+  icon: keyof typeof MaterialIcons.glyphMap
+  size?: number
+  active?: boolean
+}
+
+export default function TabBarIcon({ icon, size = 24, active = false, style, ...rest }: TabBarIconProps) {
   return (
-    <View>
-      <Text>TabBarIcon</Text>
-    </View>
+    <TouchableOpacity
+      style={[styles.container, active ? styles.activeButton : styles.inactiveButton, style]}
+      {...rest}
+      activeOpacity={0.8}
+    >
+      <MaterialIcons
+        name={icon}
+        size={size}
+        color={active ? colors.black : colors.white}
+      />
+    </TouchableOpacity>
   )
 }
