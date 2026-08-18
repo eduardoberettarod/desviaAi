@@ -182,5 +182,6 @@ export const colors = {
   white: "#f3f7f3",
   translucent: "rgba(238, 238, 238, 0.3)",
   black: "#0d0d0d",
-  onyx: "#111111"
+  onyx: "#111111",
+  obsidian: '#222'
 };
