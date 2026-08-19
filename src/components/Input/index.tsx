@@ -3,17 +3,18 @@ import React from 'react'
 import { styles } from './style';
 
 type Props = TextInputProps & {
-  label?: string
+  label?: string,
+  isTextarea?: boolean
 }
 
-export default function Input({label, ...rest}: Props) {
+export default function Input({ label, isTextarea = false, ...rest }: Props) {
   return (
     <View style={styles.container}>
-      
+
       <Text style={styles.label}>{label}</Text>
 
       <TextInput
-        style={styles.input}
+        style={isTextarea ? styles.textarea : styles.input}
         {...rest}
       />
     </View>

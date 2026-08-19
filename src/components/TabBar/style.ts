@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
   },
   tabBar: {
     position: 'absolute',
-    bottom: 80,
+    bottom: 50,
     left: '50%',
     transform: [{ translateX: '-50%' }],
     flexDirection: 'row',

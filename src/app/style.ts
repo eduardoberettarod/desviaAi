@@ -29,6 +29,6 @@ export const styles = StyleSheet.create({
   },
   subtitle: {
     fontSize: 14,
-    color: colors.gray[500],
+    color: colors.gray[400],
   }
 });

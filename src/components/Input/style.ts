@@ -16,6 +16,17 @@ export const styles = StyleSheet.create({
     borderColor: colors.gray[400],
     padding: 14,
     width: '100%',
-    borderRadius: 8
+    borderRadius: 8,
+    color: colors.white
+  },
+  textarea: {
+    borderWidth: 1,
+    borderColor: colors.gray[400],
+    padding: 14,
+    height: 100,
+    width: '100%',
+    borderRadius: 8,
+    color: colors.white,
+    backgroundColor: colors.obsidian
   }
 });
