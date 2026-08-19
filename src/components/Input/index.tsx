@@ -15,6 +15,8 @@ export default function Input({ label, isTextarea = false, ...rest }: Props) {
 
       <TextInput
         style={isTextarea ? styles.textarea : styles.input}
+        multiline={isTextarea}
+        textAlignVertical={isTextarea ? 'top' : 'center'}
         {...rest}
       />
     </View>

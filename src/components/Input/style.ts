@@ -22,11 +22,11 @@ export const styles = StyleSheet.create({
   textarea: {
     borderWidth: 1,
     borderColor: colors.gray[400],
-    padding: 14,
-    height: 100,
+    paddingHorizontal: 14,
+    minHeight: 100,
     width: '100%',
     borderRadius: 8,
     color: colors.white,
-    backgroundColor: colors.obsidian
+    backgroundColor: colors.obsidian,
   }
 });

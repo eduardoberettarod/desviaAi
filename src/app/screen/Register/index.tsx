@@ -6,6 +6,7 @@ import Banner from '@/components/Banner';
 import Input from '@/components/Input';
 import Button from '@/components/Button';
 import { colors } from '@/theme/colors';
+import Filter from '@/components/Filter';
 
 export default function Register() {
 
@@ -34,13 +35,34 @@ export default function Register() {
 
       <View style={styles.content}>
 
+        <View style={{
+          flexDirection: 'column',
+          gap: 6,
+          marginBottom: 12
+        }}>
+          <Input
+            placeholder={'Ex: Buraco profundo na via'}
+            placeholderTextColor={colors.gray[700]}
+            label={'TÍTULO DA OCORRÊNCIA'}
+          />
+        </View>
+
         <View style={{ gap: 10 }}>
-          <Text style={styles.bannerText}>Evidência Visual</Text>
+          <Text style={styles.label}>Evidência Visual</Text>
           <Banner />
         </View>
 
+        <View style={{ gap: 10, marginTop: 12 }}>
+          <Text style={styles.label}>Nivel de Periculosidade</Text>
+          <Filter
+            left={'Baixo'}
+            middle={'Médio'}
+            right={'Grave'}
+          />
+        </View>
+
         <View style={styles.form}>
-          <Text style={styles.locationText}>Localização do problema</Text>
+          <Text style={styles.label}>Localização do problema</Text>
           <Input
             label={'Bairro'}
             placeholder={'Bairro'}
@@ -70,7 +92,16 @@ export default function Register() {
           />
         </View>
 
-        <View style={{ marginTop: 36 }}>
+        <View style={{ gap: 10, marginTop: 36 }}>
+          <Text style={styles.label}>Tipo de via</Text>
+          <Filter
+            left={'Rua'}
+            middle={'Calçada'}
+            right={'Estrada'}
+          />
+        </View>
+
+        <View style={{ marginTop: 12 }}>
 
           <Input
             label={'Descrição'}

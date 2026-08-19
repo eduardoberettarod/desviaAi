@@ -21,7 +21,7 @@ export const styles = StyleSheet.create({
   content: {
     marginTop: 36
   },
-  bannerText: {
+  label: {
     textTransform: 'uppercase',
     fontSize: 14,
     color: colors.white
@@ -35,9 +35,4 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: colors.gray[700],
   },
-  locationText: {
-    textTransform: 'uppercase',
-    fontSize: 14,
-    color: colors.white
-  }
 });
