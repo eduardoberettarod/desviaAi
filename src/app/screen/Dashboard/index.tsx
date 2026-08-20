@@ -15,9 +15,11 @@ export default function Dashboard() {
         <Text style={styles.title}>Publicações Recentes</Text>
         <Text style={styles.subtitle}>Acompanhe os relatos da comunidade na sua região.</Text>
       </View>
-      
+
       <View>
-        <Card />
+        <Card
+          status={'low'}
+        />
       </View>
 
     </View>
